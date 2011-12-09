@@ -3,6 +3,7 @@ package com.poqop.document;
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
+import android.util.Log;
 
 
 import java.io.File;
@@ -42,6 +43,7 @@ public class MainBrowserActivity extends BaseBrowserActivity
     protected void showDocument(Uri uri)
     {
         final Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+       
         String uriString = uri.toString();
         String extension = uriString.substring(uriString.lastIndexOf('.') + 1);
         intent.setClass(this, extensionToActivity.get(extension));

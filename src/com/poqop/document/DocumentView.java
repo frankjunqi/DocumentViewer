@@ -50,7 +50,7 @@ public class DocumentView extends View implements ZoomListener {
 
     private void initMultiTouchZoomIfAvailable(ZoomModel zoomModel) {
         try {
-            multiTouchZoom = (MultiTouchZoom) Class.forName("org.vudroid.core.multitouch.MultiTouchZoomImpl").getConstructor(ZoomModel.class).newInstance(zoomModel);
+            multiTouchZoom = (MultiTouchZoom) Class.forName("com.poqop.document.multitouch.MultiTouchZoomImpl").getConstructor(ZoomModel.class).newInstance(zoomModel);
         } catch (Exception e) {
             System.out.println("Multi touch zoom is not available: " + e);
         }
